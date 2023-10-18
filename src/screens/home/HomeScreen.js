@@ -7,6 +7,7 @@ import NotificationScreen from './NotificationScreen';
 import PhotoScreen from './PhotoScreen';
 import TextScreen from './TextScreen';
 import CalculatorScreen from './CalculatorScreen';
+import File from './file';
 
 const Tab = createBottomTabNavigator();
 
@@ -36,7 +37,7 @@ const HomeScreen = () => {
         />
         <Tab.Screen
           name="Text"
-          component={TextScreen}
+          component={File}
           options={{
             tabBarLabel: 'Text',
             tabBarIcon: ({ color, size }) => (

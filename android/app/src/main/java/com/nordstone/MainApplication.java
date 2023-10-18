@@ -11,11 +11,17 @@ import com.facebook.react.ReactPackage;
 import com.facebook.react.defaults.DefaultNewArchitectureEntryPoint;
 import com.facebook.react.defaults.DefaultReactNativeHost;
 import com.facebook.soloader.SoLoader;
+import io.invertase.firebase.app.ReactNativeFirebaseAppPackage;
+import io.invertase.firebase.auth.ReactNativeFirebaseAuthPackage;
 
-// import io.invertase.firebase.messaging.ReactNativeFirebaseMessagingPackage; // Import the Firebase Messaging package
+import io.invertase.firebase.messaging.ReactNativeFirebaseMessagingPackage; // Import the Firebase Messaging package
 // import com.facebook.react.modules.image.ImagePipelineFactory;
 import java.util.List;
-// import java.util.Arrays; // Import the Arrays class
+import java.util.Arrays; // Import the Arrays class
+// react-native-splash-screen >= 0.3.1
+import org.devio.rn.splashscreen.SplashScreenReactPackage;
+// react-native-splash-screen < 0.3.1
+// import com.cboy.rn.splashscreen.SplashScreenReactPackage;
 
 public class MainApplication extends Application implements ReactApplication {
   private PermissionListener permissionListener;
@@ -27,7 +33,14 @@ public class MainApplication extends Application implements ReactApplication {
     }
     @Override
     protected List<ReactPackage> getPackages() {
-      @SuppressWarnings("UnnecessaryLocalVariable")
+      // return Arrays.<ReactPackage>asList(
+      //               new MainReactPackage(),
+      //       new SplashScreenReactPackage() ,
+      //       new ReactNativeFirebaseAppPackage(),
+      //       new ReactNativeFirebaseMessagingPackage(),
+      //       new ReactNativeFirebaseAuthPackage() //here
+      //       );
+      // @SuppressWarnings("UnnecessaryLocalVariable")
       List<ReactPackage> packages = new PackageList(this).getPackages();
       // Packages that cannot be autolinked yet can be added manually here, for example:
       // packages.add(new MyReactNativePackage());

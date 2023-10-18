@@ -14,11 +14,7 @@ export default function AppRoot() {
   const [initializing, setInitializing] = useState(true);
   const [user, setUser] = useState();
 
-  // useEffect(() => {
-  //   checkAlreadyLogged();
-  // });
-
-  // Handle user state changes
+ 
   function onAuthStateChange(user) {
     setUser(user);
     if (initializing) setInitializing(false);

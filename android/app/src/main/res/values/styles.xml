@@ -6,6 +6,6 @@
      <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <!--设置透明背景-->
-        <item name="android:windowIsTranslucent">true</item>
+         <item name="android:editTextBackground">@layout/launch_screen</item>
     </style>
 </resources>
