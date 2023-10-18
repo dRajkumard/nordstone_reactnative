@@ -19,7 +19,7 @@ function TextScreen() {
           setMessages(updatedMessages);
         },
         (err) => {
-          setError(err);
+          setError(err);a
         }
       );
 
