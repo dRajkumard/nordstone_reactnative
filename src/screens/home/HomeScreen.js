@@ -37,7 +37,7 @@ const HomeScreen = () => {
         />
         <Tab.Screen
           name="Text"
-          component={File}
+          component={TextScreen}
           options={{
             tabBarLabel: 'Text',
             tabBarIcon: ({ color, size }) => (

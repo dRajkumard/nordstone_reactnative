@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, TextInput, Button, FlatList } from 'react-native';
+import { View, Text, TextInput, Button, FlatList,StyleSheet } from 'react-native';
 import firestore from '@react-native-firebase/firestore';
 
 function TextScreen() {
@@ -45,6 +45,7 @@ function TextScreen() {
   return (
     <View>
       <TextInput
+      style={styles.input}
         placeholder="Write your message..."
         value={message}
         onChangeText={(text) => setMessage(text)}
@@ -61,5 +62,18 @@ function TextScreen() {
     </View>
   );
 }
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    padding: 16,
+  },
+  input: {
+    height: 100, // Set your desired height here
+    borderColor: 'gray',
+    borderWidth: 1,
+    marginBottom: 10,
+    padding: 10,
+  },
+});
 
 export default TextScreen;

@@ -43,12 +43,14 @@ const CalculatorScreen = () => {
     <View>
       <Text>Calculator</Text>
       <TextInput
+      style={styles.input}
         placeholder="Enter number 1"
         value={num1}
         onChangeText={(text) => setNum1(text)}
         keyboardType="numeric"
       />
       <TextInput
+      style={styles.input}
         placeholder="Enter number 2"
         value={num2}
         onChangeText={(text) => setNum2(text)}
@@ -79,4 +81,17 @@ const styles = StyleSheet.create({
     fontFamily: FONT_FAMILY_MEDIUM,
     fontSize: 15,
   },
+ 
+    container: {
+      flex: 1,
+      padding: 16,
+    },
+    input: {
+      height: 100, // Set your desired height here
+      borderColor: 'gray',
+      borderWidth: 1,
+      marginBottom: 10,
+      padding: 10,
+    },
+
 });
